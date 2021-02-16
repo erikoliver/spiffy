@@ -4,10 +4,10 @@
 #
 # Usage: spiffy.py inputfile.xslx
 #
-# Specification verion: UPDATE
+# Specification verion: 0.1.1
 # Specification is at: https://spif.group
 #
-# (C) 2020 Erik Oliver
+# (C) 2020, 2021 Erik Oliver
 #
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -34,9 +34,9 @@ import sys
 import re
 
 # Key terms defined in the specification
-SHEETNAME = 'Master Data'
-APPNUM = 'Application Number'
-PUBNUM = 'Publication Number'
+SHEETNAME = 'Master Data - SPIF'
+APPNUM = 'Application Number - SPIF'
+PUBNUM = 'Publication Number - SPIF'
 SUPPORTEDAPPCOUNTRIES = ['US', 'KR', 'JP', 'CN', 'EP', 'WO']
 SUPPORTEDPUBCOUNTRIES = ['US', 'KR', 'JP', 'CN', 'EP', 'WO']
 
