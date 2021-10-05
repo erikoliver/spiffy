@@ -4,7 +4,7 @@
 #
 # Usage: spiffy.py inputfile.xslx
 #
-# Specification verion: 0.1.1
+# Specification verion: 0.2.1
 # Specification is at: https://spif.group
 #
 # (C) 2020, 2021 Erik Oliver
@@ -70,9 +70,9 @@ def checkappnum(worksheet, row, column, errorcolumn):
             else:
                 worksheet.cell(row=row, column=errorcolumn, value='OK')
     elif (country == 'WO'):
-        m = re.match("^(WO(\d{4})[A-Z]{2}\d{5,6})$",appnum)
+        m = re.match("^(WO(\d{4})[A-Z]{2}\d{6})$",appnum)
         if not m:
-            worksheet.cell(row=row, column=errorcolumn, value='WO Application Numbers should be WOYYYYCC##### (5-digits) or WOYYYYCC###### (6-digits)')
+            worksheet.cell(row=row, column=errorcolumn, value='WO Application Numbers should be WOYYYYCC###### (6-digits)')
         else:
             if(int(m.group(2)) < 2000):
                 worksheet.cell(row=row, column=errorcolumn, value='Year predates 2000 not checked')
